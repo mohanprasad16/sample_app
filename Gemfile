@@ -37,4 +37,5 @@ end
 
 group :production do
   gem 'pg', '1.2.3'
+  gem 'puma', '5.3.1'
 end
