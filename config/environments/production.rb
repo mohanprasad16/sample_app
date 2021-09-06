@@ -64,7 +64,7 @@ Rails.application.configure do
   
   # config.active_job.queue_name_prefix = "sample_app_production"
   
- 
+    config.action_mailer.perform_caching = false
    
 
     config.i18n.fallbacks = true
