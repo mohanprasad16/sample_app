@@ -61,7 +61,9 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
+  
   # config.active_job.queue_name_prefix = "sample_app_production"
+  
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_caching = true
    # config/environments/production.rb
@@ -69,21 +71,21 @@ Rails.application.configure do
    config.action_mailer.default_options = {from: 'no-reply@example.com'}
 
    config.action_mailer.delivery_method = :smtp
-   host = "https://shrouded-brook-39609.herokuapp.com" #replace with your own url
+   host = "shrouded-brook-39609.herokuapp.com" #replace with your own url
    config.action_mailer.default_url_options = { host: host }
 
    # SMTP settings for gmail
-   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :user_name            => "mohanprasad16101998",
-    :password             => "bihxvukcudflffqj",
-    :authentication       => "plain",
-    :enable_starttls_auto => true
+    config.action_mailer.smtp_settings = {
+     :address              => "smtp.gmail.com",
+     :port                 => 587,
+     :user_name            => ENV["mohanprasad16101998@gmail.com"],
+     :password             => ENV["yadqclvcjjshhioz"],
+     :authentication       => "plain",
+     :enable_starttls_auto => true
 }
-   config.require_master_key = true
+    config.require_master_key = true
 
-   config.i18n.fallbacks = true
+    config.i18n.fallbacks = true
 
 
   
