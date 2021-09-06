@@ -67,23 +67,24 @@ Rails.application.configure do
    # config/environments/production.rb
 
    config.action_mailer.delivery_method = :smtp
-   host = 'example.com' #replace with your own url
+   host = https://shrouded-brook-39609.herokuapp.com
    config.action_mailer.default_url_options = { host: host }
 
    # SMTP settings for gmail
    config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => <mohanprasad16101998@gmail.com>,
-    :password             => <cfiremykbzrianlz>,
+    :user_name            => mohanprasad16101998@gmail.com,
+    :password             => cfiremykbzrianlz,
     :authentication       => "plain",
     :enable_starttls_auto => true
 }
+   config.require_master_key = true
 
   config.i18n.fallbacks = true
 
 
-  config.require_master_key = true
+  
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
