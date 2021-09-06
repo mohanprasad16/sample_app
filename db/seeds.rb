@@ -1,6 +1,6 @@
 # Create a main sample user.
 User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
+             email: "mohanprasad@railstutorial.org",
              password:              "foobar",
              password_confirmation: "foobar",
              admin:     true,
