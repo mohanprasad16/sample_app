@@ -62,20 +62,21 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "sample_app_production"
-
+  config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_caching = false
    # config/environments/production.rb
+   config.action_mailer.perform_deliveries = true
 
    config.action_mailer.delivery_method = :smtp
-   host = https://shrouded-brook-39609.herokuapp.com
+   host = "https://shrouded-brook-39609.herokuapp.com"
    config.action_mailer.default_url_options = { host: host }
 
    # SMTP settings for gmail
    config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :user_name            => mohanprasad16101998@gmail.com,
-    :password             => cfiremykbzrianlz,
+    :user_name            => "mohanprasad16101998",
+    :password             => "bihxvukcudflffqj",
     :authentication       => "plain",
     :enable_starttls_auto => true
 }
